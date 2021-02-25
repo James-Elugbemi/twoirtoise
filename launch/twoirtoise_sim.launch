@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<launch>
+  <group ns="turtlesim">
+    <node pkg="turtlesim" name="sim" type="turtlesim_node"/>
+    <node pkg="turtlesim" name="teleop_joy" type="turtle_teleop_key"/>
+    <node pkg="teleop_twist_joy" name="teleop_node" type="cmd_vel"/>
+    <node pkg="joy" type="joy_node" name="joy_node"/>
+        <param name="dev" value="~/dev/input/js0" />
+  </group>
+<!--
+ <node pkg="teleop_twist_joy" name="teleop_node" value="cmd_vel:=turtle/cmd_vel">
+    <node pkg="joy" type="joy_node" name="joy_node">
+		 js0 is the sixaxis part of the controller 
+		<param name="dev" value="/dev/input/js0" />
+
+  <group ns="turtlesim2">
+    <node pkg="turtlesim" name="sim" type="turtlesim_node"/>
+    <node pkg="teleop_twist_joy" name="teleop_joy" type="turtle_teleop_joy"/>
+  </group>
+-->
+ 
+</launch>
